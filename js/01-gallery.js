@@ -53,7 +53,7 @@ function onGalleryContainerClick(event) {
 
 function openLightboxImage(imageSourse) {
 
-  const element = basicLightbox.create(`
+  const lightboxImage = basicLightbox.create(`
 		<img width="1400" height="900" src="${imageSourse}">
 	`, {
     onShow: () => {
@@ -66,11 +66,11 @@ function openLightboxImage(imageSourse) {
 
   function onEcsKeyDown(event) {
     if (event.code === "Escape") {
-      element.close()
+      lightboxImage.close()
     }
   }
 
-  element.show()
+  lightboxImage.show()
 }
 
 
