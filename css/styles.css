@@ -27,6 +27,7 @@
 }
 
 .gallery__image {
+  display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -41,4 +42,20 @@
 
 .gallery__link:hover {
   cursor: zoom-in; /* тип курсор */
+}
+
+
+/* стили для lightbox */
+.sl-overlay {
+  background-color:rgb(250, 235, 215, .6);
+}
+
+.sl-wrapper .sl-image .sl-caption {
+  text-align: center;
+  background-color:rgb(47, 79, 79, .7);
+  color:antiquewhite;
+}
+
+.sl-wrapper .sl-close {
+  color:darkslategrey;
 }

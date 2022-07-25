@@ -1,11 +1,27 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-// console.log(galleryItems);
+console.log(galleryItems);
 
 /* 
 Создай галерею с возможностью клика по её элементам и 
 просмотра полноразмерного изображения в модальном окне. 
+Выполняй это задание в файлах 01-gallery.html и 01-gallery.js. 
+Подзадачи:
+
+1. Создание и рендер разметки по массиву данных galleryItems и предоставленному шаблону 
+элемента галереи.
+2. Реализация делегирования на div.gallery и получение url большого изображения.
+3. Подключение скрипта и стилей библиотеки модального окна basicLightbox. 
+Используй CDN сервис jsdelivr и добавь в проект ссылки на минифицированные (.min) 
+файлы библиотеки.
+4. Открытие модального окна по клику на элементе галереи. 
+Для этого ознакомься с документацией и примерами.
+Замена значения атрибута src элемента <img> в модальном окне перед открытием. 
+Используй готовую разметку модального окна с изображением из примеров библиотеки basicLightbox.
+5. Добавь закрытие модального окна по нажатию клавиши Escape. 
+Сделай так, чтобы прослушивание клавиатуры было только пока открыто модальное окно. 
+У библиотеки basicLightbox есть метод для программного закрытия модального окна.
 */
 
 const galleryRef = document.querySelector('.gallery');
@@ -72,33 +88,3 @@ function openLightboxImage(imageSourse) {
 
   lightboxImage.show()
 }
-
-
-
-
-// *создание галлеери через createElement
-/* 
-function createGallery(galleryItems) {
-
-  const galleryElements = galleryItems
-    .map(item => {
-
-      const element = document.createElement('a');
-      element.classList.add('gallery__link');
-      element.href = `${item.original}`;
-
-      const image = document.createElement('img');
-      image.classList.add('gallery__image');
-      image.src = item.preview;
-      image.dataset.source = `${item.original}`;
-      image.alt = `${item.description}`;
-      
-      element.append(image);
-      return element;
-    })
-
-    gallery.append(...galleryElements);
-}    
-
-createGallery(galleryItems)
-*/
