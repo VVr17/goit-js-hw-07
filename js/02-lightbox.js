@@ -30,6 +30,5 @@ galleryRef.insertAdjacentHTML('beforeend',createGalleryMarkup(galleryItems))
 
 
 let gallery = new SimpleLightbox('.gallery a');
-// console.log(gallery.options)
 gallery.options.captionsData = 'alt';
 gallery.options.captionDelay = 250;
