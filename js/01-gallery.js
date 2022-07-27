@@ -69,9 +69,11 @@ function openLightboxImage(imageSourse) {
 	`, {
     onShow: () => {
       document.addEventListener('keydown', onEcsKeyDown);
+      document.body.classList.add('modal-open');
     },
     onClose: () => {
       document.removeEventListener('keydown', onEcsKeyDown);
+      document.body.classList.remove('modal-open');
     }
   })
 
